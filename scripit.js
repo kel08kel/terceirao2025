@@ -21,3 +21,10 @@ document.addEventListener ('DOMContentLoaded', function (){
     botaoDeAcessibilidade.classList.toggle('rotacao-botao');
     opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
   })
+  const alternaContraste = document.getElementById('alterna-contraste')
+alternaContraste.addEventListener('clik', function (){
+  document.body.classList.toggle('alto-contraste')
+})
+const botaoSelecionado = botaoDeAcessibilidade.getAttribute('aria-expanded') === 'true';
+botaoDeAcessibilidade.setAttribute('aria-expanded', !botaoSelecionado)
+
